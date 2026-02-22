@@ -11,11 +11,11 @@ export const Card = React.forwardRef(
     className,
     bordered = false,
     hoverable = false,
-    shadow = 'md',
+    shadow = 'none',
     children,
     ...props
   }, ref) => {
-    const baseStyles = 'rounded-lg bg-white overflow-hidden';
+    const baseStyles = 'rounded border border-slate-200 bg-white overflow-hidden';
 
     const shadowStyles = {
       none: '',
@@ -31,7 +31,7 @@ export const Card = React.forwardRef(
           baseStyles,
           shadowStyles[shadow],
           bordered && 'border border-slate-200',
-          hoverable && 'transition-all duration-200 hover:shadow-lg hover:scale-105',
+          hoverable && 'transition-colors duration-150 hover:bg-slate-50',
           className
         )}
         {...props}

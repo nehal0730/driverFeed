@@ -7,14 +7,14 @@ import React from 'react';
 import clsx from 'clsx';
 
 const variantStyles = {
-  default: 'bg-slate-100 text-slate-900',
-  success: 'bg-green-100 text-green-900',
-  warning: 'bg-amber-100 text-amber-900',
-  danger: 'bg-red-100 text-red-900',
-  info: 'bg-blue-100 text-blue-900',
-  positive: 'bg-green-100 text-green-900',
-  neutral: 'bg-slate-100 text-slate-900',
-  negative: 'bg-red-100 text-red-900',
+  default: 'border-slate-200 bg-slate-50 text-slate-700',
+  success: 'border-green-200 bg-green-50 text-green-800',
+  warning: 'border-amber-200 bg-amber-50 text-amber-800',
+  danger: 'border-red-200 bg-red-50 text-red-800',
+  info: 'border-blue-200 bg-blue-50 text-blue-800',
+  positive: 'border-green-200 bg-green-50 text-green-800',
+  neutral: 'border-slate-200 bg-slate-50 text-slate-700',
+  negative: 'border-red-200 bg-red-50 text-red-800',
 };
 
 const sizeStyles = {
@@ -36,7 +36,7 @@ export const Badge = React.forwardRef(
       <span
         ref={ref}
         className={clsx(
-          'inline-flex items-center gap-2 rounded-full font-medium',
+          'inline-flex items-center gap-2 rounded border text-xs font-medium',
           variantStyles[variant] || variantStyles.default,
           sizeStyles[size],
           className

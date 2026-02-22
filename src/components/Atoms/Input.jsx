@@ -39,8 +39,8 @@ export const Input = React.forwardRef(
           <input
             ref={ref}
             className={clsx(
-              'w-full rounded-lg border border-slate-300 bg-white transition-colors',
-              'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent',
+              'w-full rounded border border-slate-300 bg-white transition-colors',
+              'focus:outline-none focus:ring-1 focus:ring-slate-400',
               'disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-slate-50',
               error && 'border-red-500 focus:ring-red-500',
               icon && 'pl-10',
